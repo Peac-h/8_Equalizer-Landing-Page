@@ -1,0 +1,61 @@
+.footer {
+  grid-column: center-start / center-end;
+
+  &__logo {
+    @media only screen and (max-width: $bp-smallest) {
+      align-self: center;
+    }
+  }
+
+  &__copyright {
+    @include paragraph-s;
+
+    span {
+      display: block;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
+
+  &__socials {
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    cursor: pointer;
+
+    img:hover {
+      filter: brightness(0) saturate(100%) invert(61%) sepia(41%)
+        saturate(2947%) hue-rotate(326deg) brightness(100%) contrast(97%);
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1;
+      grid-row: 3;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.author {
+  grid-row: -1;
+  grid-column: 1 / -1;
+  font-family: $font-copyright;
+  @include paragraph-m;
+  text-align: end;
+  color: $color-dark;
+
+  a {
+    color: $color-pink;
+  }
+}

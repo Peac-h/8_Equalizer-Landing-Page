@@ -1,0 +1,66 @@
+// color variables
+$color-pink: #fa7453;
+$color-apricot: #ffb964;
+$color-pluviophile: #66e2dc;
+$color-dark: #191826;
+$color-creamy: #fcfaf9;
+$color-white: #fff;
+
+// font variables
+$font-primary: "IBM Plex Sans", sans-serif;
+$font-copyright: "Grape Nuts", cursive;
+
+// responsive breakpoints
+$bp-medium: 56.7em; ///////// 907px
+$bp-small: 38em; //////////// 608px
+$bp-smallest: 26em; ///////// 416px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  // @media only screen and (max-width: $bp-medium) {
+  //   font-size: 55%;
+  // }
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 50%;
+  // }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-dark;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+
+  background-image: url(../assets/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-position-x: 60%;
+  background-position-y: 100%;
+
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    background-image: url(../assets/bg-main-tablet.png);
+    background-position-x: 90%;
+    background-position-y: -30%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    background-image: url(../assets/bg-main-mobile.png);
+    background-position-x: -15%;
+    background-position-y: -25%;
+  }
+}

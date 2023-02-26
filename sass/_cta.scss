@@ -1,0 +1,92 @@
+.cta {
+  grid-column: center-start / center-end;
+
+  .cta__image {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 31.2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      justify-self: center;
+      width: 21rem;
+    }
+  }
+
+  .card {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    align-self: end;
+    justify-self: end;
+
+    width: 46rem;
+    // height: 62.5rem;
+    height: min-content;
+
+    display: grid;
+    grid-template-rows:
+    minmax(min-content, 5.8rem)
+      minmax(min-content, 19.4rem)
+      minmax(min-content, 8.2rem)
+      repeat(2, min-content);
+    row-gap: 1.6rem;
+    align-items: center;
+
+    background-color: $color-pink;
+    color: $color-creamy;
+
+    border-radius: 1.2rem;
+    padding: 5.8rem 5.9rem 4.8rem 5.4rem;
+    @include paragraph-m;
+
+    &__heading {
+      @include heading-h2;
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      :first-child {
+        font-size: 6.5rem;
+        font-weight: 700;
+        line-height: 5.2rem;
+      }
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-column: 1;
+      grid-row: 3 / span 2;
+      width: 100%;
+      padding: 4.8rem 3.7rem;
+    }
+  }
+
+  &__background {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    height: 100%;
+    width: 100%;
+    background-color: $color-dark;
+    border-radius: 1rem;
+    z-index: -1;
+
+    background-image: url(../assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    // background-size: 50%;
+    background-position: 42% -35%;
+
+    @media only screen and (max-width: $bp-medium) {
+      background-position: 55% -35%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-row: 2 / span 2;
+      // background-size: 70%;
+      background-position: 45% -20%;
+    }
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 / span 3;
+  }
+}
