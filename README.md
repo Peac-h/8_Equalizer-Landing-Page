@@ -8,7 +8,7 @@ This is **my eighth project**. Built in accordance with given references. Fully 
 
 ## Checkout the live demo
 
-[Equalizer landing page]()
+[Equalizer landing page](https://peac-h.github.io/8_Equalizer-Landing-Page/)
 
 ## Built with
 
