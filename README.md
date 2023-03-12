@@ -10,6 +10,8 @@ This is **my eighth project**. Built in accordance with given references. Fully 
 
 [Equalizer landing page](https://peac-h.github.io/8_Equalizer-Landing-Page/)
 
+![Equalizer landing page solution](https://raw.githubusercontent.com/Peac-h/8_Equalizer-Landing-Page/main/Screenshot.png)
+
 ## Built with
 
 - html
